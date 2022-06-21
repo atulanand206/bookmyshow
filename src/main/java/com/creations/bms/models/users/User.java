@@ -1,4 +1,4 @@
-package com.creations.bms.models;
+package com.creations.bms.models.users;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;

@@ -1,8 +1,8 @@
-package com.creations.bms.service;
+package com.creations.bms.controllers;
 
-import com.creations.bms.models.UpdateUserDto;
-import com.creations.bms.models.User;
-import com.creations.bms.models.UserDto;
+import com.creations.bms.models.users.User;
+import com.creations.bms.models.users.UserDto;
+import com.creations.bms.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;

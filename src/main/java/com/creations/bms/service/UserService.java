@@ -1,14 +1,10 @@
 package com.creations.bms.service;
 
-import com.creations.bms.exceptions.ForbiddenException;
-import com.creations.bms.exceptions.UnauthorizedException;
-import com.creations.bms.models.UpdateUserDto;
-import com.creations.bms.models.User;
-import com.creations.bms.models.UserDto;
+import com.creations.bms.models.users.User;
+import com.creations.bms.models.users.UserDto;
 import com.creations.bms.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.UUID;
 
