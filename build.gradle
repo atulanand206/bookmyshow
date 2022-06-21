@@ -6,15 +6,21 @@ plugins {
 
 group = 'com.creations'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '10'
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
+	implementation group: 'org.flywaydb', name: 'flyway-core', version: '8.5.13'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.postgresql:postgresql'
+	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.testcontainers:junit-jupiter'
+	testImplementation 'org.testcontainers:postgresql'
 }
 
 tasks.named('test') {

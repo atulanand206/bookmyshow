@@ -19,6 +19,8 @@ What is the system?
 
 - User
     - name
+    - phone
+    - email
     - preferred_location
     
 - Movie
