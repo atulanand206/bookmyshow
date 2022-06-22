@@ -48,7 +48,7 @@ What is the system?
     
 - Screen
     - seats
-    - type
+    - kind
     - no
 
 - ScreenType: LARGE, IMAX, 3D, 5D, AUDI
@@ -60,9 +60,14 @@ What is the system?
 - SeatType: GOLD, PLATINUM, SILVER
 
 - ScreenConfig
-    - ScreenConfigType[]
+    - tag
+
+- ScreenSeats
+    - screen_config_id
+    - seat_type_id
     
-- ScreenConfigType
+- SeatTypes
+    - tag
     - seat_type
     - no_of_seats
     - price
@@ -124,6 +129,11 @@ What is the system?
     - deleteTheatre(theatre_id)
     - addMovie(theatre_id, movie_id)
     
+- SeatType Svc
+    - createSeatType(seat_type, seat_count, price)
+    - readSeatType(seat_type_id)
+    - readSeatTypes(screen_id)
+
 - Screen Svc
     - createScreenConfig(config)
     - updateScreenConfig(config)

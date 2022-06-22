@@ -5,6 +5,4 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import(DataSourceConfig.class)
-public class AppConfig {
-
-}
+public class AppConfig {}

@@ -1,4 +1,5 @@
 plugins {
+	id "com.diffplug.gradle.spotless" version "4.3.0"
 	id 'org.springframework.boot' version '2.7.0'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
@@ -17,6 +18,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.postgresql:postgresql'
+	implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
@@ -27,4 +29,10 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+spotless {
+	java {
+		googleJavaFormat()
+	}
 }
